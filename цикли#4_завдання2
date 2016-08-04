@@ -1,0 +1,12 @@
+var line = 0; 
+while(line < 101){
+console.log(line);
+line = line + 1 
+
+if (!(line%3)){console.log('Fizz')}
+
+if (!(line%5)){console.log('Bazz')}
+
+if ((!(line%5))+(!(line%3)))
+{console.log('FizzBazz')}
+}
