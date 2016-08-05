@@ -1,0 +1,15 @@
+function dashline(size) {
+
+var dash = "";
+
+for (var i = 0; i < size; i++) {
+  for (var k = 0; k < size; k++) {
+    if ((i + k) % 2 == 0)
+      dash += " ";
+    else
+      dash += "#";
+  }
+  dash += "\n";
+}
+}
+console.log(dashline(5));
