@@ -1,0 +1,8 @@
+function amount(number, number1) {
+ if (number1 != 1){
+  return number + amount(number, number1 - 1);
+} else {
+ return number;
+}
+}
+console.log(amount(2, 3))
