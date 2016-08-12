@@ -1,0 +1,21 @@
+function range(x, y, n) {
+  if (n == null) n = 1;
+  var array = [];
+
+  if (n > 0) {
+    for (var i = x; i <= y; i += n)
+    array.push(i);
+  } else {
+    for (var i = x; i >= y; i += n)
+    array.push(i);
+  }
+  return array; 
+}    
+
+function sum(array){
+var sumAll = 0; 
+for (var i = 0; i < array.length; i++)
+    sumAll += array[i];
+  return sumAll;
+ }
+	
