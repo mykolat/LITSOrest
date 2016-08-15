@@ -1,18 +1,9 @@
-function reserveArray([x, y, z]){
-
-var arr = [x, y, z];
-
-if(x = [0]){
-arr.push [2];
-} 
-if (y = [1]){
-arr.push [1];
-}
-if (z = [2]){
-arr.push [0];
+function reverseArray(array){
+var ar = [];
+for (var i = array.length - 1; i >= 0; i--)
+ ar.push(array[i]);
+ return ar;
 }
 
-}
-
-console.log(reserveArray([1, 2, 3]))
+console.log(reverseArray(["a", "b", "c"]));
 
