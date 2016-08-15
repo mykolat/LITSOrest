@@ -1,0 +1,8 @@
+function reverseArray(array){
+var ar = [];
+for (var i = array.length - 1; i >= 0; i--)
+ ar.push(array[i]);
+ return ar;
+}
+
+console.log(reverseArray(["a", "b", "c"]));
