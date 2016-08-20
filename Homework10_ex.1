@@ -11,14 +11,6 @@
   </tbody>
 </table>
 
-<table>
-  <tbody id="demo">
-    <tr>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-
 <script>
 
 var array = [[2,3,4], [5,6,7]];
@@ -36,22 +28,12 @@ for(var i = 0; i < 1; i++){
 addData(array[0][0]);
 addData(array[0][1]);
 addData(array[0][2]);
-}
-var table = document.getElementById("demo");
-var tr = 
-document.createElement("tr");
-table.appendChild(tr);
-function addData(y) {
-  var td =
-    document.createElement("td");
-  tr.appendChild(td);
-  td.innerHTML = y;
-}
-for(var i = 0; i < 1; i++){
+
 addData(array[1][0]);
 addData(array[1][1]);
 addData(array[1][2]);
 }
+
 
 </script>
 
