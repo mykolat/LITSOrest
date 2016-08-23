@@ -1,0 +1,58 @@
+//Global variables
+        var horses;
+        var tickCounter = 5;
+        //Standart random function
+        function random(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+        //Makes all horses to do the step
+        function makeStep(min, max) {
+            for (var i = 0; i < horses.length; i++) {
+                horses[i] = horses[i] + random(min, max);
+                console.log(i + 1 + " " + horses[i]);
+            }
+        }
+        //Find a winner
+        function findFirstHorse() {
+            var maxHorse = 0,
+                winner = 0;
+            for (var i = 0; i < horses.length; i++) {
+                if (horses[i] > maxHorse) {
+                    maxHorse = horses[i];
+                    winner = i + 1;
+                }
+            }
+            console.log(winner + " " + maxHorse);
+        }
+        function tick() {
+            if (tickCounter++ < 5) {
+                makeStep(100, 101);
+                findFirstHorse();
+            }
+        }
+        
+        function Animal(name,wins,years,exp,happiens,hunger,energy){
+             this.name = name;
+             this.wins = wins;
+             this.years = years;
+             this.exp = exp;
+             this.happiness = happiens;
+             this.hunger = hunger;
+             this.energy = energy;
+             this.distance = 0;
+            }
+           
+ 
+               var Lilo = new Animal("Lilo",0,1,0,100,0,100);
+               var Shunsuke = new Animal("Shunsuke",0,1,0,100,0,100);
+               var Askold = new Animal("Askold",0,1,0,100,0,100);             
+        
+        function startGame() {
+            tickCounter = 0;
+            horses = [Lilo.name, Shunsuke.name, Askold.name];
+        }
+        window.setInterval(tick, 1000);
+        
+        function Continue1() {
+            tickCounter = 0;
+        }
