@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+</html>
+<body>
+<script>
+function random(min, max){
+   return Math.random() * (max - min) + min;
+   }
+
+   function Horse(name, age, strenth, stamina){
+    this.name = name;
+    this.age = age;
+    this.stamina = stamina;
+    this.strenth = strenth;
+    this.distance = 0;
+    this.run = function(){
+       distance++;
+       return distance;
+    }
+   }
+
+   var horses = [
+    new Horse("Askold", 1, 100, 100),
+	new Horse("Bekas", 2, 80, 100),
+	new Horse("Kalipso", 3, 60, 100),
+	new Horse("Avalon", 4, 40, 100),
+	new Horse("Danat", 5, 20, 100)
+   ];
+
+   function startGameHorseRun(){
+     var max = 0;
+     index = 0;
+    for (var i = 0; i< horses.length; i++) {
+     var temp = horses[i].run();
+     if (temp > max) {
+        max = temp;
+        index = i;
+     }
+    }
+
+    if (max > maxDistance){
+       winner = index + 1;
+
+     }
+    }
+
+    function tick(){
+     if (!winner) {
+        startGameHorseRun();
+        drawDistance();
+     }
+    }
+
+    function drawDistance(){
+      for (var i = 0; i < horses.length; i++){
+        document.getElementById("horse" + 1).style.left = horses[i].getDistance
+      }
+    }
+
+    function drawField(){
+     function drawHorse(i) { 
+      var horseElement = document.createElement("div");
+      horseElement.setAttribute("id", "horse" + i);
+      horseElement.setAttribute("class", "horse");
+      return horseElement;
+     }
+     for (var i = 0; i < horses.length; i++){
+      field.appendChild(drawHorse(i)); 
+     }
+    }
+    drawField();
+    set.interval(function(){
+       tick();
+	})
+
+    function draw(){
+     var field = getElementById('field');
+   }
+</script>
+</body>
+</html>
