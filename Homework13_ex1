@@ -1,0 +1,12 @@
+var array = [[1, 2, 3], [4, 5], [6]];
+function reduce(array, combine, start){
+ var cur = start;
+  for(var i = 0; i < 1; i++)
+   cur = combine(cur, array);
+ return cur;
+}
+
+
+console.log(reduce([[1, 2, 3], [4, 5], [6]], function (a, b){
+   return a + b;
+}, 0));
