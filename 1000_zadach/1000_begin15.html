@@ -5,13 +5,12 @@
 </head>
 <body>
 <script>
-function diametrLength(square){
-  var S = square;
-  var p = 3.14;
-  var D = Math.sqrt(S*p / 4);
-  var L = p*D;
-  console.log("Diametr = " + D);
-  console.log("Length = " + L);
+function diametrLength(square) {
+  var PI = 3.14;
+  var diameter = Math.sqrt(square * PI / 4);
+  var length = PI * diameter;
+  console.log("Diametr = " + diameter);
+  console.log("Length = " + length);
 }
 console.log(diametrLength(20));
 </script>
