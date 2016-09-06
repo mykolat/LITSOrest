@@ -5,18 +5,22 @@
 <body>
 <script>
 
-function interestRate(deposit, procent, month){
-
-while(month){
-  while(procent < 25){
+function interestRate(deposit, procent){
+   var month = 0.367;
+  while(deposit < 1100){
     deposit = deposit + (deposit * procent) / 100;
-    return deposit;
-    month = month + 1;
-  } 
- }
+
+  }console.log("Deposit = " + deposit);
+
+     while(month < 1.1){
+       month = month + 0.367;
+
+     }console.log("month = " + month);
 }
 
-console.log(interestRate(1000, 4, 2));
+
+console.log(interestRate(1000, 10));
+
 
 </script>
 </body>
