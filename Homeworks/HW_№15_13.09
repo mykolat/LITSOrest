@@ -1,0 +1,9 @@
+function fibonachi(x, y){
+  for(var i = 0; i < 8; i++){
+    sum = x + y;
+    x = y;
+    y = sum;
+  } console.log(sum);
+}
+
+console.log(fibonachi(1, 1))
