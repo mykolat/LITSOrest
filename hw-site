@@ -1,0 +1,51 @@
+////hw-site folder:
+
+//код від script1.js:
+var express = require('express');
+var exphbs = require('express-handlebars')
+var app = express();
+//wiewengine
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+app.get('/', function (req, res) {
+  res.render('home');
+});
+app.get('/admin', function (req, res) {
+  res.send(404);
+});
+app.listen(3000, function () {
+  console.log('Example app listening on port 3000!'); // mt());
+});
+//код від package.json:
+{
+  "name": "hw-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0"
+  }
+}
+///wiews folder
+///layouts folder
+//код від main.handlebars:
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Example App</title>
+</head>
+<body>
+    <p>this is layout</p>
+    {{{body}}}
+</body>
+</html>
+///wiews folder
+//код выд home.handlebars:
+<h1>home page</h1>
